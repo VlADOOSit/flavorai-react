@@ -13,7 +13,7 @@ const Login: React.FC = () => {
         try {
             const res = await api.post('/auth/login', { email, password });
             setToken(res.data.accessToken);
-            navigate('/'); // переходим на главную страницу с рецептами
+            navigate('/');
         } catch (err: any) {
             console.error(err);
             alert(err.response?.data?.error || 'Error logging in');
