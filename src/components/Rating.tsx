@@ -3,7 +3,7 @@ import api from '../api/api';
 
 interface Props {
     recipeId: number;
-    onRatingAdded?: () => void; // коллбек для обновления рейтинга после добавления
+    onRatingAdded?: () => void;
 }
 
 const Rating: React.FC<Props> = ({ recipeId, onRatingAdded }) => {
