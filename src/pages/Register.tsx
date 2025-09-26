@@ -9,7 +9,7 @@ const Register: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await api.post('/auth/register', { login: username, email, password });
+            await api.post('/auth/register', { username, email, password });
             alert('User registered! You can now log in.');
         } catch (err: any) {
             console.error(err);
